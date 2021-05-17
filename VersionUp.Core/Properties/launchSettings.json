@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VersionUp.Core": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\asus\\source\\repos\\VersionUp\\WebApplication1\\WebApplication1.csproj\""
+    }
+  }
+}
