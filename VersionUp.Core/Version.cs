@@ -3,34 +3,39 @@ using System.Xml;
 
 namespace VersionUp.Core
 {
-    internal class Version
+    public class Version
     {
-        internal Version(XmlNode versionNode)
+        public Version(string[] versionNodeDetails)
         {
-            var versionNodeDetails = versionNode.InnerText.Split('.');
             Major = versionNodeDetails[0];
             Minor = versionNodeDetails[1];
             Revision = versionNodeDetails[2];
             BuildNumber = versionNodeDetails[3];
         }
 
-        internal string Major { get; set; }
-        internal string Minor { get; set; }
-        internal string Revision { get; set; }
-        internal string BuildNumber { get; set; }
+        public string Major { get; set; }
+        public string Minor { get; set; }
+        public string Revision { get; set; }
+        public string BuildNumber { get; set; }
 
-        internal void Renew()
+        public void Renew()
         {
-            Revision = (DateTime.UtcNow.Year - 2000).ToString() + (DateTime.UtcNow.DayOfYear.ToString("000"));
+            Revision = GenerateRevision();
             var buildNumber = int.Parse(BuildNumber);
             if (buildNumber == 65535)
             {
-                Revision = Revision + 1;
+                Revision = (int.Parse(Revision) + 1).ToString();
                 BuildNumber = "0";
             }
-            else {
-            BuildNumber = (buildNumber + 1).ToString();
+            else
+            {
+                BuildNumber = (buildNumber + 1).ToString();
             }
+        }
+
+        public   string GenerateRevision()
+        {
+            return (DateTime.UtcNow.Year - 2000).ToString() + (DateTime.UtcNow.DayOfYear.ToString("000"));
         }
 
         public override string ToString()

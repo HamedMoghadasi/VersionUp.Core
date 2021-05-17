@@ -7,9 +7,9 @@ namespace VersionUp.Core
     /// <summary>
     /// args[0]: Target project path
     /// </summary>
-    class Program
+    public class Program
     {
-        static int Main(string[] args)
+        public static int Main(string[] args)
         {
             try
             {
@@ -47,7 +47,8 @@ namespace VersionUp.Core
             if (versionNode != null)
             {
                 //Update Version
-                var version = new Version(versionNode);
+                var versionNodeDetails = versionNode.InnerText.Split('.');
+                var version = new Version(versionNodeDetails);
                 version.Renew();
                 versionNode.InnerText = version.ToString();
 
