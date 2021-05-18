@@ -1,6 +1,6 @@
 [![.NET](https://github.com/HamedMoghadasi/VersionUp.Core/actions/workflows/dotnet.yml/badge.svg)](https://github.com/HamedMoghadasi/VersionUp.Core/actions/workflows/dotnet.yml)
 # VersionUp.Core
-In .net core there's no `AssembleyInfo.cs` and every information about assembly will locate in `csproj` file. by using this module you can increment application version automatically.
+In .net core, there is no `AssembleyInfo.cs` and every information about assembly will locate in the `csproj` file. by using this module you can increment the application version automatically.
 
 
 ### Step 1.
@@ -16,8 +16,8 @@ Add following code to your target `.csproj`:
 ```
 
 ### How it works:
-The valid schema for working with this module is as following:
+The valid schema for working with this module is as follows:
 ```
 [Major].[Minor].[Date].[BuildNumber]
 ```
-Before Target start bnuilding, The version up module looking for `<Version>` in `<PropertyGroup>` of target csproj, if module found it, increment `BuildNumber` one unit, but if module couldn't find `<Version>` it will add `<Version>1.0.0.0</Version>` to `<PropertyGroup>` automatically.
+Before Target starts building, The version up module looking for `<Version>` in `<PropertyGroup>` of target csproj, if module found it, increment `BuildNumber` one unit, but if the module couldn't find `<Version>` it will add `<Version>1.0.0.0</Version>` to `<PropertyGroup>` automatically.
