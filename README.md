@@ -14,6 +14,21 @@ Add following code to your target `.csproj`:
     <Exec Command="[VersionUp.Core.exe address located here] &quot;$(ProjectPath)&quot;" />
   </Target>
 ```
+# Example: 
+Imagine the Project structure is like below:
+
+```
+Soltion.sln
+ | Web.csproj
+ | Tools
+   \- VersionUp.Core.exe
+```   
+For working with versionUp, you should add following snippet to `web.csproj`:
+```xml
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="$(SolutionDir)Tools\VersionUp.Core.exe &quot;$(ProjectPath)&quot;" />
+  </Target>
+```
 
 ### How it works:
 The valid schema for working with this module is as follows:
