@@ -52,7 +52,9 @@ namespace VersionUp.Core
                 version.Renew();
                 versionNode.InnerText = version.ToString();
 
+                ConsoleHelper.WriteLine("======================================================================", ConsoleColor.DarkRed);
                 ConsoleHelper.WriteLine($"Application version updated to {versionNode.InnerText}", ConsoleColor.Green);
+                ConsoleHelper.WriteLine("======================================================================", ConsoleColor.DarkRed);
             }
             else
             {
