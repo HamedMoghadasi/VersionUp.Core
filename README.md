@@ -1,7 +1,7 @@
 [![.NET](https://github.com/HamedMoghadasi/VersionUp.Core/actions/workflows/dotnet.yml/badge.svg)](https://github.com/HamedMoghadasi/VersionUp.Core/actions/workflows/dotnet.yml)
 ![Nuget](https://img.shields.io/nuget/v/VersionUp.Core?logo=Nuget&logoColor=Nuget)
 # What is VersionUp.Core ?!
-It is ready-to-go package for updating .Net core application automatically.
+It is ready-to-go package for updating .Net core application's version automatically.
 
 # Installation
  1. Get latest version of VersionUp.Core package from [Nuget](https://www.nuget.org/packages/VersionUp.Core/). 
