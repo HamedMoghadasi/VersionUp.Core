@@ -1,4 +1,5 @@
 [![.NET](https://github.com/HamedMoghadasi/VersionUp.Core/actions/workflows/dotnet.yml/badge.svg)](https://github.com/HamedMoghadasi/VersionUp.Core/actions/workflows/dotnet.yml)
+![Nuget](https://img.shields.io/nuget/v/VersionUp.Core?logo=Nuget&logoColor=Nuget)
 # VersionUp.Core
 In .net core, there is no `AssembleyInfo.cs` and every information about assembly will locate in the `csproj` file. by using this module you can increment the application version automatically.
 
