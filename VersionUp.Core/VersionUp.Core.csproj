@@ -1,9 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>1.0</Version>
+    <Version>5.1.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/HamedMoghadasi/VersionUp.Core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/HamedMoghadasi/VersionUp.Core</RepositoryUrl>
+    <Company />
+    <Authors>Hamed Moghadasi</Authors>
+    <PackageTags>auto-versioning, version</PackageTags>
   </PropertyGroup>
-
+  <ItemGroup>
+    <None Include="build\**" Pack="True" PackagePath="build\" />
+  </ItemGroup>
 </Project>

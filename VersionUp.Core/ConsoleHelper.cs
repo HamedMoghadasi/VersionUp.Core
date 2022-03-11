@@ -15,7 +15,7 @@ public static class ConsoleHelper
         ConsoleHelper.WriteLine("=============================== HELP =================================", ConsoleColor.DarkRed);
         ConsoleHelper.WriteLine("======================================================================", ConsoleColor.DarkRed);
         ConsoleHelper.WriteLine("Invalid use. Correct call format is:", ConsoleColor.Red);
-        ConsoleHelper.WriteLine("    --> VersionUp.exe \"$(ProjectPath)\"");
+        ConsoleHelper.WriteLine("    --> ../VersionUp.dll \"$(ProjectPath)\"");
         ConsoleHelper.WriteLine("$(ProjectPath) is visual studio macros.", ConsoleColor.Red);
         ConsoleHelper.WriteLine("======================================================================", ConsoleColor.DarkRed);
         ConsoleHelper.WriteLine("======================================================================", ConsoleColor.DarkRed);

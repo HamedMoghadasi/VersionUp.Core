@@ -33,7 +33,7 @@ namespace VersionUp.Core
             }
         }
 
-        public   string GenerateRevision()
+        public string GenerateRevision()
         {
             return (DateTime.UtcNow.Year - 2000).ToString() + (DateTime.UtcNow.DayOfYear.ToString("000"));
         }

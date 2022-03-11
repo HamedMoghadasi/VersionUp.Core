@@ -64,12 +64,12 @@ namespace VersionUp.Core
                 XmlNode verNode = xmldoc.CreateElement("Version");
                 verNode.InnerText = $"1.0.0.0";
                 propertyGroup.AppendChild(verNode);
-
+                ConsoleHelper.WriteLine("======================================================================", ConsoleColor.DarkRed);
                 ConsoleHelper.WriteLine($"Application version created {verNode.InnerText}", ConsoleColor.Green);
+                ConsoleHelper.WriteLine("======================================================================", ConsoleColor.DarkRed);
             }
 
             xmldoc.Save(projectPath);
-
         }
     }
 }
