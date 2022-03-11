@@ -1,39 +1,25 @@
 [![.NET](https://github.com/HamedMoghadasi/VersionUp.Core/actions/workflows/dotnet.yml/badge.svg)](https://github.com/HamedMoghadasi/VersionUp.Core/actions/workflows/dotnet.yml)
 ![Nuget](https://img.shields.io/nuget/v/VersionUp.Core?logo=Nuget&logoColor=Nuget)
-# VersionUp.Core
-In .net core, there is no `AssembleyInfo.cs` and every information about assembly will locate in the `csproj` file. by using this module you can increment the application version automatically.
+# What is VersionUp.Core ?!
+It is ready-to-go package for updating .Net core application automatically.
+
+# Installation
+ 1. Get latest version of VersionUp.Core package from [Nuget](https://www.nuget.org/packages/VersionUp.Core/). 
+ 2. All it's Done :) Now If you build your application the version will update automatticlly.
 
 
-### Step 1.
-Add `Publish\VersionUp.Core.exe` to your project or solution.
-
-### Step 2.
-Add following code to your target `.csproj`:
-
-```xml
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="[VersionUp.Core.exe address located here] &quot;$(ProjectPath)&quot;" />
-  </Target>
-```
-# Example: 
-Imagine the Project structure is like below:
-
-```
-Soltion.sln
- | Web.csproj
- | Tools
-   \- VersionUp.Core.exe
-```   
-For working with versionUp, you should add following snippet to `web.csproj`:
-```xml
-  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="$(SolutionDir)Tools\VersionUp.Core.exe &quot;$(ProjectPath)&quot;" />
-  </Target>
-```
-
-### How it works:
+# How it works:
 The valid schema for working with this module is as follows:
 ```
 [Major].[Minor].[Date].[BuildNumber]
 ```
-Before Target starts building, The version up module looking for `<Version>` in `<PropertyGroup>` of target csproj, if module found it, increment `BuildNumber` one unit, but if the module couldn't find `<Version>` it will add `<Version>1.0.0.0</Version>` to `<PropertyGroup>` automatically.
+If your `csproj` file doesn't have `<version>` node when you build your application after installation, The VersionUp.Core will add a `<version>1.0.0.0</version>` to the csproj file.
+After that when you build project again, the `[BuildNumber]` increment by 1 and the `[Date]` will update too, `[Date]` is combination of `year` and `DayOfYear`.
+for exmaple `11 March 2022` is 70th day of the year, so:
+```
+<version>1.0.22070.1</version>
+```
+
+
+#### P.S. The `VersionUp.Core` never change `Major` and `Minor` value and If you want to change their value you can do it manually.
+
