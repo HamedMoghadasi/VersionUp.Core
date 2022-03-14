@@ -2,10 +2,11 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>5.1.0</Version>
+    <Version>5.1.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/HamedMoghadasi/VersionUp.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/HamedMoghadasi/VersionUp.Core</RepositoryUrl>
+    <Description>A package for increment version of .Net Core application automatically.</Description>
     <Company />
     <Authors>Hamed Moghadasi</Authors>
     <PackageTags>auto-versioning, version</PackageTags>
