@@ -21,5 +21,5 @@ for exmaple `11 March 2022` is 70th day of the year, so:
 ```
 
 
-#### P.S. The `VersionUp.Core` never change `Major` and `Minor` value and If you want to change their value you can do it manually.
+#### P.S. The `VersionUp.Core` never change `Major` and `Minor` value and If you want to change their value you must do it manually.
 
