@@ -1,5 +1,5 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="dotnet $(NuGetPackageRoot)versionup.core\5.1.1\lib\net5.0\VersionUp.Core.dll &quot;$(ProjectPath)&quot;" />
+    <Exec Command="dotnet $(NuGetPackageRoot)versionup.core\7.0.0\lib\net7.0\VersionUp.Core.dll &quot;$(ProjectPath)&quot;" />
   </Target>
 </Project>
