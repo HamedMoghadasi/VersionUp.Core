@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 7.0.x
     - name: Restore dependencies
-      run: dotnet restore .\VersionUp.Core\
+      run: dotnet restore VersionUp.Core
     - name: Build
-      run: dotnet build .\VersionUp.Core\ --no-restore
+      run: dotnet build VersionUp.Core --no-restore
     - name: Test
-      run: dotnet test .\VersionUp.Core.Test\ --no-build --verbosity normal
+      run: dotnet test VersionUp.Core.Test --no-build --verbosity normal
