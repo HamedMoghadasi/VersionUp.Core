@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>7.0.23020.2</Version>
+    <Version>7.0.23020.3</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="VersionUp.Core" Version="7.0.1" />
