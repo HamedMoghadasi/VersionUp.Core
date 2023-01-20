@@ -3,8 +3,13 @@
 # What is VersionUp.Core ?!
 It is ready-to-go package for updating .Net core application's version automatically.
 
+# Which .Net version are supported ?!
+versionUp.Core is compatible with .net +5.0, package version MUST BE compatible with your .net version:
+ - if you are using `dotnet 7`, get VersionUp.Core `7.*.*`
+ - if you are using `dotnet 6`, get VersionUp.Core `6.*.*`
+ - if you are using `dotnet 5`, get VersionUp.Core `5.*.*`
 # Installation
- 1. Get latest version of VersionUp.Core package from [Nuget](https://www.nuget.org/packages/VersionUp.Core/). 
+ 1. Get proper version of VersionUp.Core package from [Nuget](https://www.nuget.org/packages/VersionUp.Core/).
  2. All it's Done :) Now If you build your application the version will update automatticlly.
 
 
